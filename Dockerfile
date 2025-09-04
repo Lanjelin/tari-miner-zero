@@ -31,8 +31,6 @@ RUN ln -s minotari_miner miner
 FROM scratch
 ARG BUILD_TAG
 
-COPY --from=builder /build/libminotari_mining_helper_ffi.so /bin/libminotari_mining_helper_ffi.so
-
 COPY --from=builder /out/bin /bin
 COPY --from=builder /out/lib /lib
 COPY --from=builder /out/usr /usr
